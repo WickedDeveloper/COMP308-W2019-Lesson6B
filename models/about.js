@@ -4,7 +4,7 @@ let mongoose = require('mongoose');
 let aboutSchema = mongoose.Schema({
     name: String,
     description: String
-}.
+},
 {
     collection: "favouritethings"
 });
