@@ -1,0 +1,28 @@
+<% include ../partials/header.ejs %>
+
+<!-- Embed content here -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offsetr-3 col-md-6"></div>
+                <h1><%= title %></h1>
+                <br>
+                <!-- Header Row -->
+                <table class="table table-bordered table-striped table-hover">
+                    <tr>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Description</th>
+                    </tr>
+
+                    <!-- Repeatable Template Row -->
+                    <% for(let count = 0; count < favouriteThings.length; count++) {%>
+                        <tr>
+                            <td class="text-center"><%= favouriteThings[count].name %></td>
+                            <td class="text-center"><%= favouriteThings[count].description %></td>
+                        </tr>
+                    <% } %>
+                </table>
+
+        </div>
+    </div>
+
+<%include ../partials/footer.ejs %>

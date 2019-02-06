@@ -7,19 +7,17 @@ let about = require('../models/about');
 
 // GET About page - READ Operation
 router.get('/', (req, res, next) => {
-    about.find((err, favouritethings) => {
+    about.find((err, favouriteThings) => {
         if(err) {
             return console.error(err);
         }
         else {
-            console.log(favourite-things);
+            console.log(favouriteThings);
 
-            /*
             res.render('about/index', {
                 title: 'Favourite Things',
-                aboutList: favouriteThngs
-            });
-            */
+                favouriteThings: favouriteThings
+            })
         }
     });
 });
