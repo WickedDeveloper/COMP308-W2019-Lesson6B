@@ -9,4 +9,4 @@ let aboutSchema = mongoose.Schema({
     collection: "favouritethings"
 });
 
-module.exports = moongoose.model('davidgwyn', aboutSchema);
+module.exports = mongoose.model('davidgwyn', aboutSchema);

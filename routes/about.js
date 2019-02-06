@@ -7,7 +7,7 @@ let about = require('../models/about');
 
 // GET About page - READ Operation
 router.get('/', (req, res, next) => {
-    about.find((err, favouriteThngs) => {
+    about.find((err, favouritethings) => {
         if(err) {
             return console.error(err);
         }
@@ -24,4 +24,4 @@ router.get('/', (req, res, next) => {
     });
 });
 
-module.export = router;
+module.exports = router;
