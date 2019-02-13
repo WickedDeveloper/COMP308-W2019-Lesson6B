@@ -1,6 +1,6 @@
 <% include ../partials/header.ejs %>
 
-<!-- Content for the Add Page -->
+<!-- Content for the Edit Page -->
 
 <div class="container">
     <div class="row">
@@ -14,6 +14,7 @@
                     id="FirstNameTextField"
                     placeholder="Enter First Name"
                     name="firstName"
+                    value="<%= contact.firstName %>"
                     required>
                 </div>
 
@@ -23,6 +24,7 @@
                         id="LastNameTextField"
                         placeholder="Enter Last Name"
                         name="lastName"
+                        value="<%= contact.lastName %>"
                         required>
                     </div>
 
@@ -32,6 +34,7 @@
                         id="AgeTextField"
                         placeholder="Enter Age"
                         name="age"
+                        value="<%= contact.age %>"
                         required>
                     </div>
                     
