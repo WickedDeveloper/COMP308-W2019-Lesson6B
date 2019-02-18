@@ -19,10 +19,10 @@ router.get('/services', indexController.displayServicesPage);
 router.get('/contact', indexController.displayContactPage);
 
 /* GET - displays the Login Page */
-router.get('/login', indexController.processLoginPage);
+router.get('/login', indexController.displayLoginPage);
 
 /* POST - processess the Login Page */
-router.post('/login', indexController.displayLoginPage);
+router.post('/login', indexController.processLoginPage);
 
 /* GET - display the User Registration Page */
 router.get('/register', indexController.displayRegisterPage);
