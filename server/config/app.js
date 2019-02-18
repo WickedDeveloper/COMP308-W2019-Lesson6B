@@ -1,8 +1,16 @@
+// Modules for NODE and EXPRESS
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+
+// Modules for AUTHENTICATION
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flas');
 
 // database setup
 let mongoose = require('mongoose');
@@ -33,6 +41,27 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
+
+// set-up express-Session
+app.use(session({
+    secret: 'SomeSecret',
+    saveUninitialized: false,
+    resave: false
+}));
+
+// initialize flash (two-way data binding with messages)
+app.use(flash());
+
+// initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+// passport user configuration
+
+// create a user model
+// implement user authentication strategy
+// serialize and deserialize user information
+
 
 app.use('/', indexRouter);
 app.use('/contact-list', contactRouter);
